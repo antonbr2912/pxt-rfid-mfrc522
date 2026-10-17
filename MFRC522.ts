@@ -88,10 +88,10 @@ namespace MFRC522 {
     }
 
     function SPI_Read (adr: number) {
-        pins.digitalWritePin(DigitalPin.P16, 0)
+        pins.digitalWritePin(DigitalPin.P0, 0)
         pins.spiWrite(((adr<<1)& 0x7E)|0x80)
         val = pins.spiWrite(0)
-        pins.digitalWritePin(DigitalPin.P16, 1)
+        pins.digitalWritePin(DigitalPin.P0, 1)
         return val
     }
 
