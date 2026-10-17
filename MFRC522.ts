@@ -46,10 +46,10 @@ namespace MFRC522 {
     }
 
     function SPI_Write (adr: number, val: number) {
-        pins.digitalWritePin(DigitalPin.P16, 0)
+        pins.digitalWritePin(DigitalPin.P0, 0)
         pins.spiWrite((adr << 1) & 0x7E)
         pins.spiWrite(val)
-        pins.digitalWritePin(DigitalPin.P16, 1)
+        pins.digitalWritePin(DigitalPin.P0, 1)
     }
 
     function readFromCard ():string {
