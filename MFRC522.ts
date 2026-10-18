@@ -439,7 +439,7 @@ namespace MFRC522 {
    //% weight=95
    export function getID() {
        let id = readID()
-       while (!(id)) {
+       if (!(id)) {
            id = readID()
            if (id!=undefined){
                return id
